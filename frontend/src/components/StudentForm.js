@@ -59,7 +59,7 @@ const StudentForm = () => {
     setSuccessMessage("");
 
     try {
-      await axios.post("http://127.0.0.1:8000/api/students/", formData);
+      await axios.post("https://your-backend.onrender.com/api/students/add/", formData);
       setSuccessMessage("✅ Form Submitted Successfully!");
       setFormData({
         name: "",
