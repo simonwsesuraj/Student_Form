@@ -86,3 +86,7 @@ CORS_ALLOW_ALL_ORIGINS = True  # change to False & set CORS_ALLOWED_ORIGINS in p
 #     "http://localhost:5173",
 #     "https://your-frontend.onrender.com",
 # ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://your-frontend.onrender.com",
+]
