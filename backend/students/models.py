@@ -3,22 +3,19 @@ from datetime import date
 
 class Student(models.Model):
     GENDER_CHOICES = [
-        ("male", "Male"),
-        ("female", "Female"),
-        ("other", "Other"),
+        ("Male", "Male"),
+        ("Female", "Female"),
+        ("Other", "Other"),
     ]
 
     DEPARTMENTS = [
-        ("CSE", "Computer Science"),
-        ("IT", "Information Technology"),
-        ("ECE", "Electronics"),
-        ("EEE", "Electrical"),
-        ("MECH", "Mechanical"),
-        ("DS", "Data Science"),
-        ("AI", "Artificial Intelligence"),
-        ("BT", "Botany"),
-        ("CH", "Chemistry"),
-        ("PH", "Physics"),
+        ("Computer Science", "Computer Science"),
+        ("Information Technology", "Information Technology"),
+        ( "Data Science", "Data Science"),
+        ("Artificial Intelligence", "Artificial Intelligence"),
+        ("Botany", "Botany"),
+        ("Chemistry", "Chemistry"),
+        ("Physics", "Physics"),
     ]
 
     name = models.CharField(max_length=200)
