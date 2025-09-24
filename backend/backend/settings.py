@@ -82,11 +82,8 @@ REST_FRAMEWORK = {
 # CORS (development: allow localhost Vite; in production set the actual origin)
 CORS_ALLOW_ALL_ORIGINS = True  # change to False & set CORS_ALLOWED_ORIGINS in production
 # Example for restricting origins:
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5173",
-#     "https://your-frontend.onrender.com",
-# ]
+ CORS_ALLOWED_ORIGINS = [
+     "http://localhost:5173",
+     "https://student-form-frontend.onrender.com/",
+ ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://your-frontend.onrender.com",
-]
