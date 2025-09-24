@@ -23,8 +23,8 @@ const StudentForm = () => {
   const [errors, setErrors] = useState({}); // store field errors
   const [successMessage, setSuccessMessage] = useState(""); // success message
 
-  const departments = ["CSE", "IT", "ECE", "EEE", "MECH", "DS", "AI", "BT", "CH", "PH"];
-  const genders = ["male", "female", "other"];
+  const departments = ["Computer Science", "Information Technology", "Data Science", "Artificial Inteligence", "Botony", "Chemistry", "Physics"];
+  const genders = ["Male", "Female", "Other"];
 
   // Handle input change
   const handleChange = (e) => {
