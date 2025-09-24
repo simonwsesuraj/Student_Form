@@ -53,40 +53,41 @@ const StudentForm = () => {
   };
 
   // Submit form
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setErrors({});
-    setSuccessMessage("");
+const API_BASE = process.env.REACT_APP_API_URL;
 
-    try {
-      await axios.post("https://student-form-backend-kpzn.onrender.com/api/students/", formData);
-      setSuccessMessage("✅ Form Submitted Successfully!");
-      setFormData({
-        name: "",
-        dnumber: "",
-        department: "",
-        phone: "",
-        email: "",
-        address: "",
-        mark_10: "",
-        percentage_10: "",
-        mark_12: "",
-        percentage_12: "",
-        dob: "",
-        age: "",
-        gender: "",
-        ug_cgpa: "",
-        ug_passed_out: "",
-      });
-    } catch (error) {
-      if (error.response && error.response.data) {
-        setErrors(error.response.data); // set backend errors
-      } else {
-        alert("Something went wrong. Try again.");
-      }
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setErrors({});
+  setSuccessMessage("");
+
+  try {
+    await axios.post(`${API_BASE}/api/students/`, formData);
+    setSuccessMessage("✅ Form Submitted Successfully!");
+    setFormData({
+      name: "",
+      dnumber: "",
+      department: "",
+      phone: "",
+      email: "",
+      address: "",
+      mark_10: "",
+      percentage_10: "",
+      mark_12: "",
+      percentage_12: "",
+      dob: "",
+      age: "",
+      gender: "",
+      ug_cgpa: "",
+      ug_passed_out: "",
+    });
+  } catch (error) {
+    if (error.response && error.response.data) {
+      setErrors(error.response.data);
+    } else {
+      alert("Something went wrong. Try again.");
     }
-  };
-
+  }
+};
   return (
     <form onSubmit={handleSubmit} className="border p-4 rounded shadow">
       {successMessage && (
